@@ -17,6 +17,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
+  Bank: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -27,9 +28,34 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 export type RootTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
+  map: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+//
+export type Contact = {
+url: string;
+username: string;
+};
+
+export type Transaction = {
+  contact: Contact;
+  amount: Number;
+  date: String;
+  sent: Boolean;
+  finalized: boolean;
+  accepted: boolean;
+
+};
+
+export type Profil = {
+  url: string;
+  lastName: string;
+  firstName: string;
+  username: string;
+  // birthday: string;
+}
