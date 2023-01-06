@@ -9,9 +9,6 @@ export default function MapScreen(){
 
   return(
     <View>
-     <Text>
-      lala
-     </Text>
 
     </View>
   )
